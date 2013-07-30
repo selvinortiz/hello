@@ -14,7 +14,7 @@ class Hello
 		return static::request( HttpMethod::POST, $url, $headers, $dataSet );
 	}
 
-	public static function request( $method, $url, $headers=array(), $dataSet=array() )
+	protected static function request( $method, $url, $headers=array(), $dataSet=array() )
 	{
 		$context = array(
 			'timeout'			=> 60,
