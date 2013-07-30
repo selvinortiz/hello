@@ -1,12 +1,12 @@
 <?php
 require __DIR__.'/../vendor/autoload.php';
 
-use selvinortiz\Http\Hello\Hello;
-use selvinortiz\Http\Hello\HttpMethod;
+use SelvinOrtiz\Http\Hello\Hello;
+use SelvinOrtiz\Http\Hello\HttpMethod;
 
 $url		= 'http://rest.akismet.com/1.1/verify-key';
-$data		= array( 'blog' => 'http://domain.com', 'key'=>'' );
-$headers	= array( 'user-agent' => 'Kismet 1.0 selvinortiz/kismet' );
+$data		= array( 'blog' => 'http://domain.com', 'key' => '' );
+$headers	= array( 'user-agent' => 'Hello 1.0 SelvinOrtiz/Hello' );
 $response	= Hello::post( $url, $data );
 
 echo '<pre>';

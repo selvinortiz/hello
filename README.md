@@ -1,5 +1,9 @@
-## Hello 0.1.0 (Friendly HTTP)
+## Hello 0.2.0
 The simplest and most friendly alternative to **PHP CURL** *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
+
+[![Build Status](https://travis-ci.org/selvinortiz/hello.png)](https://travis-ci.org/selvinortiz/hello)
+[![Total Downloads](https://poser.pugx.org/selvinortiz/hello/d/total.png)](https://packagist.org/packages/selvinortiz/hello)
+[![Latest Stable Version](https://poser.pugx.org/selvinortiz/hello/v/stable.png)](https://packagist.org/packages/selvinortiz/hello)
 
 ### Description
 This mini library allows you to perform `GET` and `POST` requests without much fuzz using sockets.
@@ -79,6 +83,11 @@ selvinortiz\Http\Hello\HttpResponse Object
 ```
 
 ### Changelog
+
+#### v0.2.0
+- Adds proper case for vendor namespace `selvinortiz > SelvinOrtiz`
+- Adds `PHPUnit` and `Travis CI`
+- Adds simple test case
 
 #### v0.1.0 (alpha)
 - Initial release implements `Hello::get()` and `Hello::post()`

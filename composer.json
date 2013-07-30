@@ -15,7 +15,7 @@
 
    "autoload": {
         "psr-0": {
-            "selvinortiz\\Http\\Hello": "src"
+            "SelvinOrtiz\\Http\\Hello": "src"
         }
     }
 }

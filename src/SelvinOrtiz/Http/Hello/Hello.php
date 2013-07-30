@@ -1,14 +1,14 @@
 <?php
-namespace selvinortiz\Http\Hello;
+namespace SelvinOrtiz\Http\Hello;
 
 /**
- * @=selvinortiz\Http\Hello\Hello
+ * @=SelvinOrtiz\Http\Hello\Hello
  *
  * The simplest and most friendly alternative to PHP CURL
  *
  * @author		Selvin Ortiz - http://twitter.com/selvinortiz
- * @package		Tools
- * @version		0.1.0
+ * @package		Http
+ * @version		0.2.0
  * @category	HTTP (PHP)
  * @copyright	2013 Selvin Ortiz
  *

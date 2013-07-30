@@ -1,5 +1,5 @@
 <?php
-namespace selvinortiz\Http\Hello;
+namespace SelvinOrtiz\Http\Hello;
 
 class HttpStatus
 {
