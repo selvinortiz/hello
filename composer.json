@@ -1,0 +1,21 @@
+{
+    "name": "selvinortiz/hello",
+    "description": "The simplest and most friendly alternative to PHP CURL.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Selvin Ortiz",
+            "email": "selvin@selvin.co"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.2"
+    },
+
+   "autoload": {
+        "psr-0": {
+            "selvinortiz\\Http\\Hello": "src"
+        }
+    }
+}
