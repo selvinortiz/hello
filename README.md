@@ -1,8 +1,8 @@
 ## Hello (Friendly HTTP)
-*by* [Selvin Ortiz](http://twitter.com/selvinortiz)
+The simplest and most friendly alternative to **PHP CURL** *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
 
 ### Description
-The simplest and most friendly alternative to **PHP CURL**
+This mini library allows you to perform `GET` and `POST` requests without much fuzz using sockets.
 
 ### Requirements
 - PHP 5.3
@@ -18,7 +18,7 @@ use selvinortiz\Http\Hello\Hello;
 $url        = 'http://rest.akismet.com/1.1/verify-key';
 $data       = array( 'blog' => 'http://domain.com', 'key'=>'' );
 $headers    = array( 'user-agent' => 'Kismet 1.0 selvinortiz/kismet' );
-$response   = Hello::post( $url, $data );
+$response   = Hello::post( $url, $headers, $data );
 
 echo $response;     // Outputs the response content (invalid)
 
@@ -78,3 +78,4 @@ selvinortiz\Http\Hello\HttpResponse Object
 
 ### Notes
 This is a work in progress, consider it *alpha* at best.
+
