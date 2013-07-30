@@ -1,7 +1,24 @@
 <?php
 namespace selvinortiz\Http\Hello;
 
-// @=TODO: Implement PUT/DELETE
+/**
+ * @=selvinortiz\Http\Hello\Hello
+ *
+ * The simplest and most friendly alternative to PHP CURL
+ *
+ * @author		Selvin Ortiz - http://twitter.com/selvinortiz
+ * @package		Tools
+ * @version		0.1.0
+ * @category	HTTP (PHP)
+ * @copyright	2013 Selvin Ortiz
+ *
+ * @todo
+ * - Implement Hello::put()
+ * - Implement Hello::delete()
+ * - Add Composer
+ * - Add PHPUnit
+ */
+
 class Hello
 {
 	public static function get( $url, $headers=array(), $dataSet=array() )

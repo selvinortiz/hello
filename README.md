@@ -1,4 +1,4 @@
-## Hello (Friendly HTTP)
+## Hello 0.1.0 (Friendly HTTP)
 The simplest and most friendly alternative to **PHP CURL** *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
 
 ### Description
@@ -25,6 +25,7 @@ echo $response;     // Outputs the response content (invalid)
 print_r($response); // Outputs the response object
 
 /*
+
 selvinortiz\Http\Hello\HttpResponse Object
 (
     [raw] => Array
@@ -73,9 +74,11 @@ selvinortiz\Http\Hello\HttpResponse Object
 
     [response] => invalid
 )
+
 */
 ```
 
-### Notes
-This is a work in progress, consider it *alpha* at best.
+### Changelog
 
+#### v0.1.0 (alpha)
+- Initial release implements `Hello::get()` and `Hello::post()`
