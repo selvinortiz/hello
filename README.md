@@ -1,4 +1,4 @@
-## Hello 0.2.0
+## Hello 0.3.0
 The simplest and most friendly alternative to **PHP CURL** *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
 
 [![Build Status](https://travis-ci.org/selvinortiz/hello.png)](https://travis-ci.org/selvinortiz/hello)
@@ -10,7 +10,7 @@ This mini library allows you to perform `GET` and `POST` requests without much f
 
 ### Requirements
 - PHP 5.3
-- Composer _(Package will be added soon)_
+- Composer [selvinortiz/hello](https://packagist.org/packages/selvinortiz/hello)
 
 ### Usage
 
@@ -22,7 +22,7 @@ use selvinortiz\Http\Hello\Hello;
 $url        = 'http://rest.akismet.com/1.1/verify-key';
 $data       = array( 'blog' => 'http://domain.com', 'key'=>'' );
 $headers    = array( 'user-agent' => 'Kismet 1.0 selvinortiz/kismet' );
-$response   = Hello::post( $url, $headers, $data );
+$response   = Hello::post( $url, $data, $headers );
 
 echo $response;     // Outputs the response content (invalid)
 
@@ -83,6 +83,11 @@ selvinortiz\Http\Hello\HttpResponse Object
 ```
 
 ### Changelog
+
+#### v0.3.0
+- Fixes example in `/etc/`
+- Updates this readme with composer package info
+- Changes the parameter order to all methods moving `headers` last
 
 #### v0.2.0
 - Adds proper case for vendor namespace `selvinortiz > SelvinOrtiz`

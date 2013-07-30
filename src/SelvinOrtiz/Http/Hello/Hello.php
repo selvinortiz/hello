@@ -8,7 +8,7 @@ namespace SelvinOrtiz\Http\Hello;
  *
  * @author		Selvin Ortiz - http://twitter.com/selvinortiz
  * @package		Http
- * @version		0.2.0
+ * @version		0.3.0
  * @category	HTTP (PHP)
  * @copyright	2013 Selvin Ortiz
  *
@@ -21,17 +21,17 @@ namespace SelvinOrtiz\Http\Hello;
 
 class Hello
 {
-	public static function get( $url, $headers=array(), $dataSet=array() )
+	public static function get( $url, $dataSet=array(), $headers=array() )
 	{
-		return static::request( HttpMethod::GET, $url, $headers, $dataSet );
+		return static::request( HttpMethod::GET, $url, $dataSet, $headers );
 	}
 
-	public static function post( $url, $headers=array(), $dataSet=array() )
+	public static function post( $url, $dataSet=array(), $headers=array() )
 	{
-		return static::request( HttpMethod::POST, $url, $headers, $dataSet );
+		return static::request( HttpMethod::POST, $url, $dataSet, $headers );
 	}
 
-	protected static function request( $method, $url, $headers=array(), $dataSet=array() )
+	protected static function request( $method, $url, $dataSet=array(), $headers=array() )
 	{
 		$context = array(
 			'timeout'			=> 60,
