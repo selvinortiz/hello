@@ -62,17 +62,18 @@ class Hello
 			break;
 		}
 
-		$context[ 'header' ]	= self::normalizeHeaders( $headers );
-		$context[ 'content' ]	= self::normalizeData( $dataSet );
+		$context[ 'header' ]	= static::normalizeHeaders( $headers );
+		$context[ 'content' ]	= static::normalizeData( $dataSet );
 
 		try {
-			$stream		= fopen( self::normalizeUrl( $url ), 'r', false, stream_context_create( array( 'http'=>$context ) ) );
+			$url		= static::normalizeUrl( $url );
+			$context	= stream_context_create( array( 'http'=>$context ) );
+			$stream		= fopen( $url, 'r', false, $context );
 			$content	= stream_get_contents( $stream );
 			$response	= stream_get_meta_data( $stream );
-
 			fclose( $stream );
 		} catch( \Exception $e ) {
-			throw new Exception( $e->getMessage() );
+			throw new \Exception( $e->getMessage() );
 		}
 
 		return new HttpResponse( $response, $content );
@@ -80,7 +81,8 @@ class Hello
 
 	protected static function normalizeData( $data )
 	{
-		if ( is_array( $data ) && count( $data) ) {
+		if ( is_array( $data ) && count( $data) )
+		{
 			return http_build_query( $data );
 		}
 
@@ -91,7 +93,8 @@ class Hello
 	{
 		$normalized = array();
 
-		if ( is_array( $headers ) && count( $headers) ) {
+		if ( is_array( $headers ) && count( $headers) )
+		{
 			foreach ( $headers as $key => $val ) {
 				$key = strtolower( trim( $key ) );
 				if ( 'user-agent' === $key || 'expect' === $key ) { continue; }
@@ -121,7 +124,7 @@ class Hello
 		}
 
 		if ( $port && $port[0] != ':') { $port = ':' . $port; }
-		$result = $scheme . $host . $port . $path . $query;
+		$result = $scheme.$host.$port.$path.$query;
 
 		return $result;
 	}

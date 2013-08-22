@@ -1,5 +1,5 @@
 ## Hello 0.3.0
-The simplest and most friendly alternative to **PHP CURL** *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
+Friendly alternative to **PHP CURL** *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
 
 [![Build Status](https://travis-ci.org/selvinortiz/hello.png)](https://travis-ci.org/selvinortiz/hello)
 [![Total Downloads](https://poser.pugx.org/selvinortiz/hello/d/total.png)](https://packagist.org/packages/selvinortiz/hello)
@@ -10,7 +10,7 @@ This mini library allows you to perform `GET` and `POST` requests without much f
 
 ### Requirements
 - PHP 5.3
-- Composer [selvinortiz/hello](https://packagist.org/packages/selvinortiz/hello)
+- [Composer](http://getcomposer.org) and [selvinortiz/hello](https://packagist.org/packages/selvinortiz/hello)
 
 ### Usage
 

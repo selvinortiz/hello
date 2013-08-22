@@ -28,6 +28,7 @@ class HttpResponse
 	public function getResponseStatus( $response=array() )
 	{
 		$status = array();
+
 		try {
 			$status	= array_shift( $response );
 			$status	= explode( ' ', $status[0] );
