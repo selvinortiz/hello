@@ -1,7 +1,7 @@
 <?php
 use SelvinOrtiz\Http\Hello\Hello;
 
-class FluxTest extends PHPUnit_Framework_TestCase
+class HelloTest extends PHPUnit_Framework_TestCase
 {
 	public function setUp()	{}
 
@@ -17,7 +17,7 @@ class FluxTest extends PHPUnit_Framework_TestCase
 		$url		= 'http://rest.akismet.com/1.1/verify-key';
 		$data		= array( 'blog' => 'http://domain.com', 'key' => '' );
 		$headers	= array( 'user-agent' => 'Hello 1.0 SelvinOrtiz/Hello' );
-		$response	= Hello::post( $url, $data );
+		$response	= Hello::createPostRequest( $url, $data )->send();
 
 		$this->assertEquals( 'invalid', (string) $response );
 		$this->assertInstanceOf( 'SelvinOrtiz\\Http\\Hello\\HttpResponse', $response );
