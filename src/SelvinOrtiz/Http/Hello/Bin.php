@@ -3,7 +3,7 @@ namespace SelvinOrtiz\Http\Hello;
 
 class Bin extends \SelvinOrtiz\Zit\Zit
 {
-	public function run()
+	public static function run()
 	{
 		$bin = Bin::getInstance();
 
